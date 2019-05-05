@@ -22,3 +22,7 @@ Route::get('/', function() {
 Route::get('/hello', function() {
     return "hello world from <strong>hello</strong> page";
 });
+
+Route::get('/about', function() {
+    return view('pages.about');
+});
