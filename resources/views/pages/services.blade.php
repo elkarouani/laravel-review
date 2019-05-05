@@ -6,6 +6,6 @@
         <title>{{config('app.name', 'LSAPP')}}</title>
     </head>
     <body>
-        hello from about page
+        Hello from the services view
     </body>
 </html>
