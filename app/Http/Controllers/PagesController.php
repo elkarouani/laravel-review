@@ -11,14 +11,20 @@ class PagesController extends Controller
     }
 
     public function getIndexView(){
-        return view('pages.index');
+        $title = "this is a title from controller";
+        return view('pages.index')->with('title', $title);
     }
 
     public function getAboutView(){
-        return view('pages.about');
+        $title = "About us";
+        return view('pages.about')->with('title', $title);
     }
 
     public function getServicesView(){
-        return view('pages.services');
+        $data = array(
+            'title' => "Our services",
+            'services' => array('Web', "Mobile", "Desktop")
+        );
+        return view('pages.services')->with($data);
     }
 }
